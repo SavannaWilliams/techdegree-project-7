@@ -61,51 +61,59 @@ main {
 #search {
     background: lightgreen;
     grid-area: search;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-area {
+    border-bottom: solid 1px grey;
+    background: greenyellow;
 }
 
 #traffic {
-    background: red;
+    border-bottom: solid 1px grey;
     grid-area: traffic;
 }
 
 #daily-traffic {
-    background: blue;
+    border-bottom: solid 1px grey;
     grid-area: daily-traffic;
 }
 
 #mobile-users {
-    background: orange;
+    border-bottom: solid 1px grey;
     grid-area: mobile-users;
+
 }
 
 #social-stats {
-    background: green;
+    border-bottom: solid 1px grey;
     grid-area: social-stats;
     display: flex;
     flex-direction: column;
 }
 
 .social-tile {
-    background: fuchsia;
+    background: red;
 }
 
 #new-members {
-    background: purple;
+    border-bottom: solid 1px grey;
     grid-area: new-members;
 }
 
 #recent-activity {
-    background: lightblue;
+    border-bottom: solid 1px grey;
     grid-area: recent-activity;
 }
 
 #message-user {
-    background: pink;
+    border-bottom: solid 1px grey;
     grid-area: message-user;
 }
 
 #settings {
-    background: grey;
+    border-bottom: solid 1px grey;
     grid-area: settings;
 }
 
@@ -138,8 +146,32 @@ main {
         "message-user settings";
     }
 
+    #search {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .search-area {
+        border-left: solid 1px grey;
+        width: 80%;
+    }
+
     #social-stats {
+        border-bottom: solid 1px grey;
         flex-flow: row wrap;
         justify-content: space-around;
     }
+    
+    #daily-traffic {
+        border-right: solid 1px grey;
+    }
+    
+    #new-members {
+        border-right: solid 1px grey;
+    }
+    
+    #message-user {
+        border-right: solid 1px grey;
+    }
+    
 }
