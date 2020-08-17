@@ -1,0 +1,80 @@
+/* ================================= 
+  Base Styles
+==================================== */
+body {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+span {
+    font-weight: 700;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+#search {
+    background: lightgreen;
+    height: 100px;
+}
+
+#traffic {
+    background: red;
+    height: 100px;
+}
+
+#daily-traffic {
+    background: blue;
+    height: 100px;
+}
+
+#mobile-users {
+    background: orange;
+    height: 100px;
+}
+
+#social-stats {
+    background: green;
+}
+
+.social-tile {
+    background: fuchsia;
+    height: 50px;
+}
+
+#new-members {
+    background: purple;
+    height: 100px;
+}
+
+#recent-activity {
+    background: lightblue;
+    height: 100px;
+}
+
+#message-user {
+    background: pink;
+    height: 100px;
+}
+
+#settings {
+    background: grey;
+    height: 100px;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+/* == Tablet media query == */
+@media only screen and (min-width: 768px) {
+}
+
+/* == Desktop media query == */
+@media only screen and (min-width: 1024px) {
+}
