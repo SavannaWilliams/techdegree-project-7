@@ -18,53 +18,75 @@ span {
   Base Layout Styles
 ==================================== */
 
+.wrapper {
+    display: grid;
+    grid-template-columns: auto;
+
+}
+
+header {
+    background: hotpink;
+    grid-area: header;
+}
+
+nav {
+    background: lightgoldenrodyellow;
+    grid-area: nav;
+}
+
+main {
+    display: grid;
+    grid-area: main;
+}
+
 #search {
     background: lightgreen;
-    height: 100px;
+    grid-area: search;
 }
 
 #traffic {
     background: red;
-    height: 100px;
+    grid-area: traffic;
 }
 
 #daily-traffic {
     background: blue;
-    height: 100px;
+    grid-area: daily-traffic;
 }
 
 #mobile-users {
     background: orange;
-    height: 100px;
+    grid-area: mobile-users;
 }
 
 #social-stats {
     background: green;
+    grid-area: social-stats;
 }
 
 .social-tile {
     background: fuchsia;
-    height: 50px;
 }
 
 #new-members {
     background: purple;
     height: 100px;
+    grid-area: new-members;
 }
 
 #recent-activity {
     background: lightblue;
-    height: 100px;
+    grid-area: recent-activity;
 }
 
 #message-user {
     background: pink;
-    height: 100px;
+    grid-area: message-user;
 }
 
 #settings {
     background: grey;
-    height: 100px;
+    grid-area: settings;
 }
 
 /* ================================= 
@@ -77,4 +99,24 @@ span {
 
 /* == Desktop media query == */
 @media only screen and (min-width: 1024px) {
+    .wrapper {
+        grid-template-columns: 1fr 9fr;
+        grid-template-areas: 
+        "header header header"
+        "nav main main"
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "search search"
+        "traffic traffic"
+        "daily-traffic mobile-users"
+        "social-stats social-stats"
+        "new-members recent-activity"
+        "message-user settings";
+    }
+
 }
