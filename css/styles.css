@@ -113,7 +113,6 @@ main {
 }
 
 #settings {
-    border-bottom: solid 1px grey;
     grid-area: settings;
 }
 
@@ -172,6 +171,10 @@ main {
     
     #message-user {
         border-right: solid 1px grey;
+    }
+
+    #settings {
+        border-bottom: solid 1px grey;
     }
     
 }
