@@ -29,7 +29,13 @@ fieldset {
     border: 0;
 }
 
-fieldset>input,
+button {
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.message-form>input,
 textarea {
     width: 100%;
     box-sizing: border-box;
@@ -38,11 +44,11 @@ textarea {
     border-radius: 5px;
 }
 
-fieldset>input {
+.message-form>input {
     height: 40px;
 }
 
-fieldset>button {
+.message-form>button {
     background: var(--purple);
     border: none;
     border-radius: 5px;
@@ -53,6 +59,34 @@ fieldset>button {
 textarea {
     height: 120px;
 }
+
+.settings-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.settings-btns button {
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    height: 45px;
+}
+
+.settings-btns button:first-of-type {
+    background: var(--purple);
+    margin-right: 30px;
+}
+
+.settings-btns button:last-of-type {
+    background: var(--gray);
+}
+
+select {
+    padding: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
 
 /* ================================= 
   Base Layout Styles
@@ -96,7 +130,12 @@ main {
     "recent-activity"
     "message-user"
     "settings";
+    margin-bottom: 75px;
 
+}
+
+section {
+    padding: 20px 35px;
 }
 
 #search {
@@ -174,7 +213,6 @@ main {
 }
 
 #message-user {
-    border-bottom: solid 1px var(--light-gray);
     grid-area: message-user;
 }
 
@@ -187,12 +225,25 @@ main {
 
 #settings {
     grid-area: settings;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.toggle-group {
+    margin-bottom: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 /* Start Toggle Switch */
 .on-off-switch {
     position: relative;
-    display:inline;
+    display: inline-block;
 }
 
 input[type="checkbox"] {
@@ -323,10 +374,6 @@ input[type="checkbox"]:checked ~ .offLabel {
     
     #message-user {
         border-right: solid 1px var(--light-gray);
-    }
-
-    #settings {
-        border-bottom: solid 1px var(--light-gray);
     }
     
 }

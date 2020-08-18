@@ -75,7 +75,7 @@
             <section id="message-user">
                 <h3>Message User</h3>
                 <form action="#">
-                    <fieldset>
+                    <fieldset class="message-form">
                         <input id="user-search" type="text" placeholder="Search for User">
                         <textarea name="message" id="message" placeholder="Message for User"></textarea>
                         <button type="submit">Send</button>
@@ -85,13 +85,39 @@
 
             <section id="settings">
                 <h3>Settings</h3>
-                <div class="on-off-switch">
-                    <input type="checkbox" name="toggle" id="toggle">
-                    <label for="toggle" class="switch"></label>
-                    <label for="" class="offLabel">OFF</label>
-                    <label for="" class="onLabel">ON</label>
-                </div>
+                <fieldset class="settings-form">
+                    <div class="toggle-group">
+                        <label for="email">Send Email Notifications</label>
+                        <div class="on-off-switch">
+                            <input type="checkbox" name="email" id="email" value="email">
+                            <label for="email" class="switch"></label>
+                            <label for="" class="offLabel">OFF</label>
+                            <label for="" class="onLabel">ON</label>
+                        </div>
+                    </div>
+                    <div class="toggle-group">
+                        <label for="profile">Set Profile to Public</label>
+                        <div class="on-off-switch">
+                            <input type="checkbox" name="profile" id="profile" value="public">
+                            <label for="profile" class="switch"></label>
+                            <label for="" class="offLabel">OFF</label>
+                            <label for="" class="onLabel">ON</label>
+                        </div>
+                    </div>
+                    <select name="timezone" id="timezone">
+                        <option value="" disabled selected>Select Timezone</option>
+                        <option value="eastern">Eastern Timezone</option>
+                        <option value="central">Central Timezone</option>
+                        <option value="mountain">Mountain Timezone</option>
+                        <option value="pacific">PacifiC Timezone</option>
+                    </select>
+                    <div class="settings-btns">
+                        <button type="submit">Save</button>
+                        <button type="reset">Cancel</button>
+                    </div>
 
+
+                </fieldset>
             </section>
 
         </main>
