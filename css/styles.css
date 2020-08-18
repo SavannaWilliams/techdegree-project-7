@@ -7,6 +7,7 @@
     --teal: #73b1bf;
     --green: #81c98f;
     --light-gray: #c5c5c5;
+    --gray: #b2b2b2;
 }
 
 
@@ -39,6 +40,14 @@ textarea {
 
 fieldset>input {
     height: 40px;
+}
+
+fieldset>button {
+    background: var(--purple);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
 }
 
 textarea {
@@ -99,6 +108,16 @@ main {
 .search-area {
     border-bottom: solid 1px var(--light-gray);
     background: #fbfbfb;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+}
+
+#search-input {
+    width: 90%;
+    height: 40px;
+    padding: 12px;
+    box-sizing: border-box;
 }
 
 #traffic {
@@ -120,12 +139,28 @@ main {
 #social-stats {
     border-bottom: solid 1px var(--light-gray);
     grid-area: social-stats;
+}
+
+.social-widgets {
     display: flex;
     flex-direction: column;
 }
 
 .social-tile {
-    background: red;
+    border: solid 1px var(--light-gray);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.social-header {
+    color: var(--purple);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.social-numbers {
+    font-size: 2.5rem;
+    font-weight: 300;
 }
 
 #new-members {
@@ -153,6 +188,75 @@ main {
 #settings {
     grid-area: settings;
 }
+
+/* Start Toggle Switch */
+.on-off-switch {
+    position: relative;
+    display:inline;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.switch { 
+    position: relative ;
+    display: inline-block;
+    width: 90px;
+    height: 35px;
+    background-color: var(--gray);
+    border-radius: 20px;
+  }
+
+  .switch::after {
+    /* The toggle circle */
+    z-index: 2;
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid var(--gray);
+    top: 4px;
+    left: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  input[type="checkbox"]:checked + .switch::after {
+    left: 62px; 
+  }
+
+  input[type="checkbox"]:checked + .switch {
+    background-color: var(--purple);
+  }
+
+  .onLabel,
+  .offLabel {
+      position: absolute;
+      bottom: 12px;
+      pointer-events: none;
+      font-weight: 700;
+      color: #fff;
+      transition: opacity 0.3s ease-out;
+  }
+  
+  .onLabel {
+    left: 6px;
+  }
+
+  .offLabel {
+    right: 6px;
+}
+
+input[type="checkbox"]:checked ~ .offLabel {
+    opacity: 0;
+  }
+
+  input[type="checkbox"]:not(:checked) ~ .onLabel {
+    opacity: 0;
+  }
+  /* End Toggle Switch */
 
 /* ================================= 
   Media Queries
@@ -191,6 +295,16 @@ main {
     .search-area {
         border-left: solid 1px var(--light-gray);
         width: 80%;
+        justify-content: flex-end;
+    }
+
+    #search-input {
+        width: 40%;
+    }
+
+    .social-widgets {
+        flex-flow: row wrap;
+        justify-content: space-around;
     }
 
     #social-stats {

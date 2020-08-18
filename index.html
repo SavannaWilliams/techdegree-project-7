@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -41,15 +41,27 @@
             </section>
 
             <section id="social-stats">
-                <div class="social-tile">
-                    <h3>Twitter</h3>
-                </div>
-                <div class="social-tile">
-                    <h3>Facebook</h3>
-                </div>
-                <div class="social-tile">
-                    <h3>Google+</h3>
-                </div>
+                <h3>Social Stats</h3>
+                <div class="social-widgets">
+                    <div class="social-tile">
+                        <div>
+                            <p class="social-header">Twitter</p>
+                            <p class="social-numbers">10,345</p>
+                        </div>
+                    </div>
+                    <div class="social-tile">
+                        <div>
+                            <p class="social-header">Facebook</p>
+                            <p class="social-numbers">8,739</p>
+                        </div>
+                    </div>
+                    <div class="social-tile">
+                        <div>
+                            <p class="social-header">Google+</p>
+                            <p class="social-numbers">2,530</p>
+                        </div>
+                    </div>
+            </div>
             </section>
 
             <section id="new-members">
@@ -73,6 +85,13 @@
 
             <section id="settings">
                 <h3>Settings</h3>
+                <div class="on-off-switch">
+                    <input type="checkbox" name="toggle" id="toggle">
+                    <label for="toggle" class="switch"></label>
+                    <label for="" class="offLabel">OFF</label>
+                    <label for="" class="onLabel">ON</label>
+                </div>
+
             </section>
 
         </main>
