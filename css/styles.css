@@ -52,6 +52,7 @@ span {
 
 fieldset {
     border: 0;
+    padding: 0;
 }
 
 button {
@@ -124,6 +125,10 @@ select {
     "header"
     "nav"
     "main";
+    /* Offset for the fixed header */
+
+    padding-top: 50px;
+
 }
 
 
@@ -133,6 +138,10 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 nav {
@@ -266,13 +275,11 @@ section {
 
 #message-user {
     grid-area: message-user;
-}
-
-#message-user fieldset {
+    height: 322px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-content: space-between;
 }
 
 #settings {
@@ -280,6 +287,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-content: space-between;
+    height: 322px;
 }
 
 .toggle-group {

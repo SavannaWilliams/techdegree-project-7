@@ -1,10 +1,13 @@
-let purple = '#7477bf';
+const purple = '#7477bf';
+const teal = '#73b1bf';
+const green = '#81c98f';
 
 Chart.defaults.global.responsive = true;
 
+
+// Daily Traffic Bar Chart
 var dtc = document.getElementById('dailyTrafficChart').getContext('2d');
 var myChart = new Chart(dtc, {
-    
     type: 'bar',
     data: {
         labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
@@ -48,8 +51,33 @@ var myChart = new Chart(dtc, {
     }
 });
 
-// window.addEventListener('resize', function (e) {
-//     let size = window.screen.availWidth;
-//     let newSize = dtc.canvas.parentNode.style.width = (size/2);
-//     console.log(newSize);
-// });
+// Mobile Users Doughnut Chart
+
+var muc = document.getElementById('mobileUsersChart').getContext('2d');
+var myChart = new Chart(muc, {
+    type: 'doughnut',
+    data: {
+        labels: ['Phones', 'Tablets', 'Desktop'],
+        datasets: [{
+            label: '# of Daily Visistors',
+            data: [15, 15,70],
+            backgroundColor: [
+                green,
+                teal,
+                purple,
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        legend: {
+            display: true,
+            position: 'right',
+            labels: {
+                fontSize: 20,
+                padding: 20,
+                boxWidth: 20,
+            }
+        },
+    }
+});
