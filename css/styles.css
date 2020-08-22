@@ -194,6 +194,12 @@ section {
     grid-area: daily-traffic;
 }
 
+.chart-container {
+    position: relative;
+    height: 100%;
+}
+
+
 #mobile-users {
     border-bottom: solid 1px var(--light-gray);
     grid-area: mobile-users;
