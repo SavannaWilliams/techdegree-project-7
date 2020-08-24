@@ -118,7 +118,7 @@ var myChart = new Chart(muc, {
                 teal,
                 purple,
             ],
-            borderWidth: 2
+            borderWidth: 0
         }]
     },
     options: {

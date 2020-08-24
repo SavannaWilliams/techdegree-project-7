@@ -247,6 +247,7 @@ section {
     grid-area: new-members;
 }
 
+header img,
 .member img,
 .member-activity img {
     width: 40px;
@@ -275,7 +276,10 @@ section {
 
 #message-user {
     grid-area: message-user;
-    height: 322px;
+}
+
+#message-user form {
+    height: 274px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -284,11 +288,11 @@ section {
 
 #settings {
     grid-area: settings;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: space-between;
-    height: 322px;
+}
+
+#message-user h3,
+#settings h3{
+    margin: 0;
 }
 
 .toggle-group {
@@ -298,7 +302,6 @@ section {
     width: 300px;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 /* Start Toggle Switch */
@@ -407,7 +410,7 @@ input[type="checkbox"]:checked ~ .offLabel {
 
     .search-area {
         border-left: solid 1px var(--light-gray);
-        width: 80%;
+        width: 90%;
         justify-content: flex-end;
     }
 
