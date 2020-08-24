@@ -19,7 +19,6 @@ let trafficData = {
 };
 
 let trafficOptions = {
-    options:{
         aspectRatio: 2.5,
         animation: {
             duration: 0
@@ -34,7 +33,6 @@ let trafficOptions = {
         legend: {
             display: false
         },
-    }
 };
 
 let trafficChart = new Chart(trafficCanvas, {
@@ -64,7 +62,7 @@ const dailyData = {
                 }
             }],
         },
-        legend : {
+        legend: {
             display: false
         }
     }
