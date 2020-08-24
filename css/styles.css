@@ -65,8 +65,15 @@ header p {
 }
 
 span {
-    font-weight: 700;
-    font-weight: 700;
+    font-weight: 300;
+    
+}
+
+sup {
+    font-size: .6rem;
+    vertical-align: baseline;
+    position: relative;
+    top: -.8rem;
 }
 
 fieldset {
@@ -227,6 +234,24 @@ header img {
 nav {
     background: var(--dark-purple);
     grid-area: nav;
+}
+
+.nav-icons {
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a:not(.active) {
+    opacity: 50%;
+}
+
+nav a img {
+    width: 30px;
 }
 
 main {
@@ -432,6 +457,7 @@ input[type="checkbox"] {
       position: absolute;
       bottom: 12px;
       pointer-events: none;
+      user-select: none;
       font-weight: 700;
       color: #fff;
       transition: opacity 0.3s ease-out;
@@ -465,10 +491,16 @@ input[type="checkbox"]:checked ~ .offLabel {
 /* == Desktop media query == */
 @media only screen and (min-width: 1024px) {
     .wrapper {
-        grid-template-columns: 1fr 9fr;
+        grid-template-columns: 100px 9fr;
         grid-template-areas: 
         "header header header"
         "nav main main"
+    }
+
+    .nav-icons {
+        flex-direction: column;
+        height: 250px;
+        width: 100%;
     }
 
     main {
