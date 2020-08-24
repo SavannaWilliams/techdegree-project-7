@@ -298,6 +298,26 @@ section {
     box-sizing: border-box;
 }
 
+#alert {
+    grid-area: alert;
+}
+
+.alert-banner {
+    background-color: var(--purple);
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.alert-banner p span {
+    font-weight: 900;
+    padding-right: 5px;
+}
+
 #traffic {
     border-bottom: solid 1px var(--light-gray);
     grid-area: traffic;
@@ -508,6 +528,7 @@ input[type="checkbox"]:checked ~ .offLabel {
         grid-template-rows: auto;
         grid-template-areas: 
         "search search"
+        "alert alert"
         "traffic traffic"
         "daily-traffic mobile-users"
         "social-stats social-stats"
