@@ -6,134 +6,115 @@ const white = '#fff';
 Chart.defaults.global.responsive = true;
 
 // Traffic Chart
+let trafficCanvas = document.getElementById('trafficChart');
 
-var tc = document.getElementById('trafficChart').getContext('2d');
-var myChart = new Chart(tc, {
-    type: 'line',
-    data: {
-        labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+let trafficData = {
+        labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
         datasets: [{
-            label: '# of Weekly Visistors',
-            data: [500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
-            backgroundColor: 'rgba(116, 119, 191, 0.5)',
-            borderColor: purple,
-            borderWidth: 2,
-            pointBackgroundColor: white,
-            pointRadius: 6
+            data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
+            backgroundColor: 'rgba(116, 119, 191, .5)',
+            borderWidth: 1,
         }]
-    },
-    options: {
+};
+
+let trafficOptions = {
+    options:{
         aspectRatio: 2.5,
-        pointRadius: 8,
-        pointBackgroundColor: '#fff',
-        pointBorderColor: purple,
-        legend: {
-            display: false
+        animation: {
+            duration: 0
         },
         scales: {
             yAxes: [{
                 ticks: {
                     beginAtZero: true,
-                    max: 2500,
-                    stepSize: 500,
-                    labelOffset: 80,
-                    callback: function(value, index) {
-                        if (value !== 0) {
-                            return value;
-                        }
                     }
-                }
             }],
-            xAxes: [{
-                barPercentage: 0.6,
-                }]
         },
-        animation: {
-            duration: 0
+        legend: {
+            display: false
         },
-        // Creates straight lines between points
         elements: {
             line: {
                 tension: 0
             }
         }
     }
+};
+
+let trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: trafficData,
+    options: trafficOptions
 });
 
 // Daily Traffic Bar Chart
-var dtc = document.getElementById('dailyTrafficChart').getContext('2d');
-var myChart = new Chart(dtc, {
-    type: 'bar',
-    data: {
-        labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
-        datasets: [{
-            label: '# of Daily Visistors',
-            data: [50, 75, 145, 100, 200, 175, 75],
-            backgroundColor: [
-                purple,
-                purple,
-                purple,
-                purple,
-                purple,
-                purple,
-                purple
-            ],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        maintainAspectRatio: false,
-        legend: {
-            display: false
-        },
+let dailyCanvas = document.getElementById('dailyTrafficChart');
+
+const dailyData = {
+    labels: ["S", "M", "T", "W", "T", "F", "S"],
+    datasets: [{
+        label: '# of Hits',
+        data: [75, 115, 175, 125, 225, 200, 100],
+        backgroundColor: purple,
+        borderWidth: 1
+    }]
+    };
+
+    const dailyOptions = {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: true,
-                    max: 250,
-                    stepSize: 50,
-                    labelOffset: 35,
-                    callback: function(value, index) {
-                        if (value !== 0) {
-                            return value;
-                        }
-                    }
+                    beginAtZero:true
                 }
             }],
-            xAxes: [{
-                barPercentage: 0.6,
-                }]
+        },
+        legend : {
+            display: false
         }
     }
+    
+
+let dailyChart = new Chart(dailyCanvas, {
+    type: 'bar',
+    data: dailyData,
+    options: dailyOptions
 });
 
-// Mobile Users Doughnut Chart
 
-var muc = document.getElementById('mobileUsersChart').getContext('2d');
-var myChart = new Chart(muc, {
-    type: 'doughnut',
-    data: {
-        labels: ['Phones', 'Tablets', 'Desktop'],
-        datasets: [{
-            label: '% of Users',
-            data: [15, 15,70],
-            backgroundColor: [
-                green,
-                teal,
-                purple,
-            ],
-            borderWidth: 0
-        }]
-    },
-    options: {
+
+
+// Mobile Users Doughnut Chart
+let mobileCanvas = document.getElementById('mobileUsersChart');
+
+const mobileData = {
+    labels: ["Phones", "Tablet",  "Desktop"],
+    datasets: [{
+        label: '# of Users',
+        data: [500, 550, 2000],
+        borderWidth: 0,
+        backgroundColor: [
+            teal,
+            green,
+            purple,
+        ]
+    }]
+}   
+
+    const mobileOptions = {
         legend: {
-            display: true,
             position: 'right',
             labels: {
                 fontSize: 20,
                 padding: 20,
                 boxWidth: 20,
+                fontStyle: 'bold'
             }
-        },
+        }      
     }
+    
+
+let mobileChart = new Chart(mobileCanvas, {
+    type: 'doughnut',
+    data: mobileData,
+    options: mobileOptions
 });

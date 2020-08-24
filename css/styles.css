@@ -328,21 +328,23 @@ section {
     grid-area: daily-traffic;
 }
 
-.chart-container {
-    position: relative;
-    height: 100%;
+#trafficChart {
+    width: 45vw;
 }
-
 
 #mobile-users {
     border-bottom: solid 1px var(--light-gray);
     grid-area: mobile-users;
-
 }
 
 #social-stats {
     border-bottom: solid 1px var(--light-gray);
     grid-area: social-stats;
+}
+
+#daily-traffic,
+#mobile-users {
+    width: 45vw;
 }
 
 .social-widgets {
