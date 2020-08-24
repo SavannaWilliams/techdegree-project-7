@@ -3,7 +3,7 @@ const teal = '#73b1bf';
 const green = '#81c98f';
 const white = '#fff';
 
-Chart.defaults.global.responsive = true;
+// Chart.defaults.global.responsive = true;
 
 // Traffic Chart
 let trafficCanvas = document.getElementById('trafficChart');
@@ -14,6 +14,7 @@ let trafficData = {
             data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
             backgroundColor: 'rgba(116, 119, 191, .5)',
             borderWidth: 1,
+            lineTension: 0
         }]
 };
 
@@ -33,11 +34,6 @@ let trafficOptions = {
         legend: {
             display: false
         },
-        elements: {
-            line: {
-                tension: 0
-            }
-        }
     }
 };
 
@@ -104,8 +100,6 @@ const mobileData = {
         legend: {
             position: 'right',
             labels: {
-                fontSize: 20,
-                padding: 20,
                 boxWidth: 20,
                 fontStyle: 'bold'
             }

@@ -261,6 +261,7 @@ main {
     grid-template-rows: auto;
     grid-template-areas: 
     "search"
+    "alert"
     "traffic"
     "daily-traffic"
     "mobile-users"
@@ -328,10 +329,6 @@ section {
     grid-area: daily-traffic;
 }
 
-#trafficChart {
-    width: 45vw;
-}
-
 #mobile-users {
     border-bottom: solid 1px var(--light-gray);
     grid-area: mobile-users;
@@ -342,9 +339,9 @@ section {
     grid-area: social-stats;
 }
 
-#daily-traffic,
-#mobile-users {
-    width: 45vw;
+.chart-container {
+    width: 85vw;
+    margin: 0 auto;
 }
 
 .social-widgets {
@@ -508,6 +505,9 @@ input[type="checkbox"]:checked ~ .offLabel {
 
 /* == Tablet media query == */
 @media only screen and (min-width: 768px) {
+
+
+
 }
 
 /* == Desktop media query == */
@@ -569,6 +569,15 @@ input[type="checkbox"]:checked ~ .offLabel {
     
     #daily-traffic {
         border-right: solid 1px var(--light-gray);
+    }
+
+    #traffic .chart-container {
+        width: 85vw;
+    }
+    
+    #daily-traffic .chart-container,
+    #mobile-users .chart-container {
+        width: 40vw;
     }
     
     #new-members {
