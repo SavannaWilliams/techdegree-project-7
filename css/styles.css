@@ -113,6 +113,36 @@ select {
     margin-bottom: 20px;
 }
 
+/* ================================= 
+  SVG Styles
+==================================== */
+.social-svg {
+    width: 75px;
+    height: 75px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.social-svg svg {
+    width: 60px;
+     height: 60px;
+}
+
+#twitter-svg {
+    padding-left: 20px;
+    padding-top: 20px; 
+}
+
+#facebook-svg {
+    padding-left: 6px;
+    padding-top: 5px;
+}
+
+#google-svg {
+    padding-left: 22px;
+    padding-top: 22px;  
+}
 
 /* ================================= 
   Base Layout Styles
@@ -276,6 +306,7 @@ header img,
 
 #message-user {
     grid-area: message-user;
+    border-bottom: solid 1px var(--light-gray);
 }
 
 #message-user form {
@@ -426,7 +457,7 @@ input[type="checkbox"]:checked ~ .offLabel {
     }
 
     #social-stats {
-        border-bottom: solid 1pxvar(--light-gray);
+        border-bottom: solid 1px var(--light-gray);
         flex-flow: row wrap;
         justify-content: space-around;
     }
@@ -441,6 +472,7 @@ input[type="checkbox"]:checked ~ .offLabel {
     
     #message-user {
         border-right: solid 1px var(--light-gray);
+        border-bottom: none;
     }
     
 }

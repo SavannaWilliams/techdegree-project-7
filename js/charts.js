@@ -23,6 +23,7 @@ var myChart = new Chart(tc, {
         }]
     },
     options: {
+        aspectRatio: 2.5,
         pointRadius: 8,
         pointBackgroundColor: '#fff',
         pointBorderColor: purple,
@@ -46,6 +47,9 @@ var myChart = new Chart(tc, {
             xAxes: [{
                 barPercentage: 0.6,
                 }]
+        },
+        animation: {
+            duration: 0
         },
         // Creates straight lines between points
         elements: {
