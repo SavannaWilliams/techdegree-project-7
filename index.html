@@ -14,9 +14,30 @@
     <div class="wrapper">
         <header>
             <h1>Your<span>App<sup>TM</sup></span></h1>
-            <div id="notif-message">
-                <p>You have 6 unread messages</p>
-            </div>
+            <section id="notifications">
+                <div class="notif-message">
+                    <div>
+                        <p class="notif-message-dot">&#8226;</p>
+                        <p class="notif-message-text">You have 6 unread messages</p>
+                    </div>
+                    <p class="notif-message-x">&#10006;</p>
+                </div>
+                <div class="notif-message">
+                    <div>
+                        <p class="notif-message-dot">&#8226;</p>
+                        <p class="notif-message-text">You have 3 new followers</p>
+                    </div>
+                    <p class="notif-message-x">&#10006;</p>
+                </div>
+                <div class="notif-message">
+                    <div>
+                        <p class="notif-message-dot">&#8226;</p>
+                        <p class="notif-message-text">Your password expires in 7 days</p>
+                    </div>
+                    <p class="notif-message-x">&#10006;</p>
+                </div>
+                
+            </section>
             <a href="#" id="notif-bell">
                 <div id="notif-dot"></div>
                 <img src="icons/icon-bell.svg" alt="Notifications">
@@ -26,19 +47,32 @@
             <p>Josh Sullivan</p>
         </header>
         <nav>
-            <div class="nav-icons">
-                <a href="index.html" class="active">
-                    <img src="icons/icon-dashboard.svg" alt="Dashboard Page">
-                </a>
-                <a href="#">
-                    <img src="icons/icon-members.svg" alt="Members Page">
-                </a>
-                <a href="#">
-                    <img src="icons/icon-visits.svg" alt="Visits Page">
-                </a>
-                <a href="#">
-                    <img src="icons/icon-settings.svg" alt="Settings Page">
-                </a>
+            <div class="nav-icon-bar">
+                <div class="nav-icon active">
+                    <a href="index.html" class="active">
+                        <img src="icons/icon-dashboard.svg" alt="Dashboard Page">
+                    </a>
+                </div>
+
+                <div class="nav-icon">
+                    <a href="#">
+                        <img src="icons/icon-members.svg" alt="Members Page">
+                    </a>
+                </div>
+
+
+                <div class="nav-icon">
+                    <a href="#">
+                        <img src="icons/icon-visits.svg" alt="Visits Page">
+                    </a>
+                </div>
+
+                <div class="nav-icon">
+                    <a href="#">
+                        <img src="icons/icon-settings.svg" alt="Settings Page">
+                    </a>
+                </div>
+
             </div>
         </nav>
         <main>
@@ -51,7 +85,7 @@
             <section id="alert">
                 <div class="alert-banner">
                     <p><span>Alert</span> Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.</p>
-                    <p><span>X</span></p>
+                    <p id="alert-x"><span>X</span></p>
                 </div>
             </section>
             <section id="traffic">

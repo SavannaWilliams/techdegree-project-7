@@ -1,9 +1,10 @@
-let alert = document.getElementById('alert');
+let alertBanner = document.getElementById('alert');
+let alertX = document.getElementById('alert-x');
 let notifications = document.getElementById('notif-bell');
-let notifMessages = document.getElementById('notif-message');
+let notifMessages = document.getElementById('notifications');
 
-alert.addEventListener('click', (e) => {
-    alert.remove();
+alertX.addEventListener('click', (e) => {
+    alertBanner.remove();
 });
 
 notifications.addEventListener('click', (e) => {
