@@ -232,9 +232,11 @@
 
             <section id="message-user">
                 <h3>Message User</h3>
-                <form action="#">
+                <form action="#" autocomplete="off">
                     <fieldset class="message-form">
-                        <input id="user-search" type="text" placeholder="Search for User">
+                        <div class="autocomplete" style="width:300px;">
+                            <input id="myInput" type="text" name="myCountry" placeholder="Country">
+                          </div>
                         <textarea name="message" id="message" placeholder="Message for User"></textarea>
                         <button type="submit">Send</button>
                     </fieldset>
