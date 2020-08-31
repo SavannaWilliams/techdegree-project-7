@@ -96,7 +96,7 @@ button {
     border-radius: 5px;
 }
 
-.message-form>button {
+.message-form-elements>button {
     background: var(--purple);
     border: none;
     border-radius: 5px;
@@ -476,7 +476,7 @@ header img,
     border-bottom: solid 1px var(--light-gray);
 }
 
-.message-form {
+.message-form-elements {
     height: 256px;
     display: flex;
     flex-direction: column;

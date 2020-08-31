@@ -163,3 +163,36 @@ function autocomplete(inp, arr) {
   }
 
   autocomplete(autocompleteField, users);
+
+  // Message form submit button code
+
+  let messageForm = document.getElementById('message-form');
+  let userField = document.getElementById('user-search');
+  let messageField = document.getElementById('message');
+
+  let successMessage = "Your message has been sent successfully.";
+  let bothErrorMessage = "The user and message fields cannot be blank.";
+  let userFieldErrorMessage = "You must select a user to message.";
+  let messageFieldErrorMessage = "Your message cannot be blank.";
+
+  function submitForm() {
+    let message = document.createElement('p');
+    let noChild = messageForm.querySelector('p') === null;
+    message.style.color = '#7477bf';
+
+    if(userField.value && messageField.value !== ''){
+      message.textContent = successMessage;
+    } else if (userField.value === '' && messageField.value !== '') {
+      message.textContent = userFieldErrorMessage;
+    } else if (messageField.value === '' && userField.value !== ''){
+      message.textContent = messageFieldErrorMessage;
+    } else if (userField.value === '' && messageField.value === ''){
+      message.textContent = bothErrorMessage;
+    }
+    if (noChild){
+      messageForm.appendChild(message);
+      setTimeout(function() {
+        messageForm.removeChild(message);
+      }, 2000);
+    }
+  }

@@ -232,13 +232,13 @@
 
             <section id="message-user">
                 <h3>Message User</h3>
-                <form action="#" autocomplete="off">
-                    <div class="message-form">
+                <form action="#" autocomplete="off" id="message-form" onsubmit="event.preventDefault()">
+                    <div class="message-form-elements">
                         <div class="autocomplete">
                             <input id="user-search" type="text" name="myCountry" placeholder="Search for User">
                           </div>
                         <textarea name="message" id="message" placeholder="Message for User"></textarea>
-                        <button type="submit">Send</button>
+                        <button type="submit" onclick="submitForm()">Send</button>
                         </div>
                 </form>
             </section>
