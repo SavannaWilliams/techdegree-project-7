@@ -87,17 +87,13 @@ button {
     text-transform: uppercase;
 }
 
-.message-form>input,
-textarea {
+#user-search,
+#message {
     width: 100%;
     box-sizing: border-box;
     padding: 12px;
     margin-bottom: 15px;
     border-radius: 5px;
-}
-
-.message-form>input {
-    height: 40px;
 }
 
 .message-form>button {
