@@ -402,6 +402,33 @@ section {
     grid-area: traffic;
 }
 
+#trafficHeader {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.trafficOptions {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.chartOption {
+    margin-left: 5px;
+}
+
+.activeChart {
+    background-color: var(--green);
+    border-radius: 5px;
+    padding: 0 7px;
+    color: white;
+}
+
+.chartOption p {
+    text-align: center;
+}
+
 #daily-traffic {
     border-bottom: solid 1px var(--light-gray);
     grid-area: daily-traffic;
