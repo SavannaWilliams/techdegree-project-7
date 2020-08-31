@@ -200,6 +200,11 @@ header h1 {
     flex: 2;
 }
 
+#notif-bell:hover {
+    transform: scale(1.2) translate(5px, 0);
+    transition: transform .6s;
+}
+
 #notif-dot {
     width: 7px;
     height: 7px;

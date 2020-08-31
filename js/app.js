@@ -2,6 +2,7 @@ let alertBanner = document.getElementById('alert');
 let alertX = document.getElementById('alert-x');
 let notifications = document.getElementById('notif-bell');
 let notifMessages = document.getElementById('notifications');
+let notifX = document.getElementsByClassName('notif-message-x');
 let emailCheckbox = document.getElementById('email');
 let profileCheckbox = document.getElementById('profile');
 let timezone = document.getElementById('timezone');
@@ -33,6 +34,10 @@ notifications.addEventListener('click', (e) => {
     } else {
         notifMessages.style.display = 'none';
     }
+});
+
+notifMessages.addEventListener('click', (e) => {
+  notifMessages.style.display = 'none';
 });
 
 // Set the Email Notifications local storage on change
