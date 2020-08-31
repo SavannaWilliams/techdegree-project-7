@@ -476,7 +476,7 @@ header img,
     border-bottom: solid 1px var(--light-gray);
 }
 
-#message-user form {
+.message-form {
     height: 256px;
     display: flex;
     flex-direction: column;
@@ -535,8 +535,6 @@ header img,
 #settings {
     grid-area: settings;
 }
-
-
 
 .toggle-group {
     margin-bottom: 30px;
