@@ -481,60 +481,66 @@ header img,
 }
 
 #message-user form {
-    height: 274px;
+    height: 256px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-content: space-between;
 }
+
 /* Start Autocomplete */
 .autocomplete {
-    /*the container must be positioned relative:*/
     position: relative;
     display: inline-block;
     width: 100%;
   }
 
-  .autocomplete-items {
+#user-search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.autocomplete-items {
     position: absolute;
     border: 1px solid #d4d4d4;
     border-bottom: none;
     border-top: none;
     z-index: 99;
-    /*position the autocomplete items to be the same width as the container:*/
     top: 100%;
     left: 0;
     right: 0;
-  }
+}
 
-  .autocomplete-items div {
+.autocomplete-items div {
     padding: 10px;
     cursor: pointer;
     background-color: #fff;
     border-bottom: 1px solid #d4d4d4;
-  }
-
-  .autocomplete-items div:hover {
-    /*when hovering an item:*/
-    background-color: #e9e9e9;
-  }
-
-  .autocomplete-active {
-    /*when navigating through the items using the arrow keys:*/
-    background-color: DodgerBlue !important;
-    color: #ffffff;
-  }
-
-/* End Autocomplete */
-
-#settings {
-    grid-area: settings;
 }
+
+.autocomplete-items div:hover {
+    background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+    /*For navigating through the items using the arrow keys:*/
+    background-color: var(--purple) !important;
+    color: #ffffff;
+}
+/* End Autocomplete */
 
 #message-user h3,
 #settings h3{
     margin: 0;
 }
+
+#settings {
+    grid-area: settings;
+}
+
+
 
 .toggle-group {
     margin-bottom: 30px;
