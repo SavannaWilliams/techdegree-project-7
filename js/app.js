@@ -334,11 +334,12 @@ trafficSelectors.addEventListener("click", function (e) {
   let currentChart = e.target;
   let trafficHeader = document.getElementById('trafficHeader');
 
+  console.log(currentChart);
+
   // Remove existing active chart styling before applying new styling to newly selected chart.
   for(let i = 0; i < chartSelectors.length; i++) {
     let selectedChart = chartSelectors[i];
-    console.log(selectedChart.id);
-    if (selectedChart !== trafficHeader && selectedChart.classList.contains('activeChart')) {
+    if (currentChart.tagName !== 'DIV' && selectedChart.classList.contains('activeChart')) {
       selectedChart.classList.remove('activeChart');
       selectedChartDiv.classList.add('activeChart');
     }
