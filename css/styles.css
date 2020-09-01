@@ -146,6 +146,7 @@ select {
 .svg-wrapper {
     flex: 2;
     text-align: left;
+    margin-right: 10px;
 }
 
 .circle-svg {
@@ -311,10 +312,6 @@ nav {
     align-items: center;
 }
 
-.nav-icon.active {
-    border-left: 3px solid var(--green);
-}
-
 .nav-icon a {
     margin: 0 auto;
 }
@@ -366,7 +363,7 @@ section {
 }
 
 #search-input {
-    width: 90%;
+    width: 80%;
     height: 40px;
     padding: 12px;
     box-sizing: border-box;
@@ -460,17 +457,20 @@ section {
 .social-widgets {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
 }
 
 .social-tile {
-    width: 300px;
+    width: 90%;
     height: 70px;
     border: solid 1px var(--light-gray);
     border-radius: 5px;
     padding: 25px;
+    margin-bottom: 10px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -569,7 +569,7 @@ header img,
 
 #message-user h3,
 #settings h3{
-    margin: 0;
+    margin: 0 0 15px 0;
 }
 
 #settings {
@@ -662,7 +662,16 @@ input[type="checkbox"]:checked ~ .offLabel {
 /* == Tablet media query == */
 @media only screen and (min-width: 768px) {
 
+    #search-input {
+        width: 90%;
+    }
 
+    .social-widgets {
+        flex-direction: row;
+    }
+
+    .social-tile {
+        width: 25%;
 
 }
 
@@ -679,6 +688,15 @@ input[type="checkbox"]:checked ~ .offLabel {
         flex-direction: column;
         height: 250px;
         width: 100%;
+    }
+
+    .nav-icon.active {
+        border-left: 3px solid var(--green);
+    }
+
+    .nav-icon.active {
+        border-left: 3px solid var(--green);
+        border-bottom: none;
     }
 
     main {
@@ -721,8 +739,6 @@ input[type="checkbox"]:checked ~ .offLabel {
 
     #social-stats {
         border-bottom: solid 1px var(--light-gray);
-        flex-flow: row wrap;
-        justify-content: space-around;
     }
     
     #daily-traffic {
