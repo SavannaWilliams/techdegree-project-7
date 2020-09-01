@@ -169,35 +169,57 @@ function autocomplete(inp, arr) {
 
   autocomplete(autocompleteField, users);
 
-  // Message form submit button code
+// Message form submit button code
 
-  let messageForm = document.getElementById('message-form');
-  let userField = document.getElementById('user-search');
-  let messageField = document.getElementById('message');
+let messageForm = document.getElementById('message-form');
+let userField = document.getElementById('user-search');
+let messageField = document.getElementById('message');
 
-  let successMessage = "Your message has been sent successfully.";
-  let bothErrorMessage = "The user and message fields cannot be blank.";
-  let userFieldErrorMessage = "You must select a user to message.";
-  let messageFieldErrorMessage = "Your message cannot be blank.";
+let successMessage = "Your message has been sent successfully.";
+let bothErrorMessage = "The user and message fields cannot be blank.";
+let userFieldErrorMessage = "You must select a user to message.";
+let messageFieldErrorMessage = "Your message cannot be blank.";
 
-  function submitForm() {
-    let message = document.createElement('p');
-    let noChild = messageForm.querySelector('p') === null;
+function submitForm() {
+  let message = document.createElement('p');
+  // Check if message currently displayed.
+  let noChild = messageForm.querySelector('p') === null;
+  message.style.color = 'red';
+
+  // Set message text based on missing/filled fields
+  if(userField.value && messageField.value !== ''){
+    message.textContent = successMessage;
     message.style.color = '#7477bf';
+  } else if (userField.value === '' && messageField.value !== '') {
+    message.textContent = userFieldErrorMessage;
+  } else if (messageField.value === '' && userField.value !== ''){
+    message.textContent = messageFieldErrorMessage;
+  } else if (userField.value === '' && messageField.value === ''){
+    message.textContent = bothErrorMessage;
+  }
+  // Delete message after 2 seconds.
+  if (noChild){
+    messageForm.appendChild(message);
+    setTimeout(function() {
+      messageForm.removeChild(message);
+    }, 2000);
+  }
+}
 
-    if(userField.value && messageField.value !== ''){
-      message.textContent = successMessage;
-    } else if (userField.value === '' && messageField.value !== '') {
-      message.textContent = userFieldErrorMessage;
-    } else if (messageField.value === '' && userField.value !== ''){
-      message.textContent = messageFieldErrorMessage;
-    } else if (userField.value === '' && messageField.value === ''){
-      message.textContent = bothErrorMessage;
-    }
-    if (noChild){
-      messageForm.appendChild(message);
-      setTimeout(function() {
-        messageForm.removeChild(message);
-      }, 2000);
+// Chart date range section code
+
+let trafficSelectors = document.getElementById('trafficOptions');
+let chartSelectors = document.getElementsByClassName('chartOption');
+
+// Check for clicks on different traffic date range options.
+trafficSelectors.addEventListener("click", function (e) {
+  let selectedChart = e.target.parentNode;
+
+  // Remove existing active chart styling before applying new styling to newly selected chart.
+  for(let i = 0; i < chartSelectors.length; i++) {
+    if (chartSelectors[i].classList.contains('activeChart')) {
+      chartSelectors[i].classList.remove('activeChart');
     }
   }
+  selectedChart.classList.add('activeChart');
+});

@@ -5,7 +5,7 @@ const white = '#fff';
 
 // Chart.defaults.global.responsive = true;
 
-// Traffic Chart
+// Traffic Chart- Weekly
 let trafficCanvas = document.getElementById('trafficChart');
 
 let trafficData = {
