@@ -94,6 +94,7 @@ button {
     padding: 12px;
     margin-bottom: 15px;
     border-radius: 5px;
+    border: 1px solid var(--gray);
 }
 
 .message-form-elements>button {
@@ -106,6 +107,8 @@ button {
 
 textarea {
     height: 120px;
+    border-radius: 5px;
+    border: 1px solid var(--gray);
 }
 
 .settings-btns {
@@ -133,6 +136,8 @@ select {
     padding: 16px;
     width: 100%;
     margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--gray);
 }
 
 /* ================================= 
@@ -705,6 +710,8 @@ input[type="checkbox"]:checked ~ .offLabel {
         width: 40%;
         margin: auto 0;
         margin-right: 35px;
+        border-radius: 10px;
+        border: 1px solid var(--gray);
     }
 
     .social-widgets {
