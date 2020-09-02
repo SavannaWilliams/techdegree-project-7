@@ -85,6 +85,12 @@ button {
     color: white;
     font-weight: 700;
     text-transform: uppercase;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in;
+}
+
+button:hover {
+    transform: scale(.98);
+    filter: brightness(85%);
 }
 
 #user-search,
@@ -417,6 +423,12 @@ section {
 
 .chartOption {
     margin-left: 5px;
+}
+
+.chartOption:not(.activeChart):hover {
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 0 7px;
 }
 
 .activeChart {
