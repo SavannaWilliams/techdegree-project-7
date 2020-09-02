@@ -1,9 +1,9 @@
+//-------------------------------------------------------
 // Chart Javascript
 
 const purple = '#7477bf';
 const teal = '#73b1bf';
 const green = '#81c98f';
-const white = '#fff';
 
 // Chart.defaults.global.responsive = true;
 
@@ -67,7 +67,7 @@ const dailyData = {
         legend: {
             display: false
         }
-    }
+    };
     
 
 let dailyChart = new Chart(dailyCanvas, {
@@ -94,7 +94,7 @@ const mobileData = {
             purple,
         ]
     }]
-}   
+};
 
     const mobileOptions = {
         legend: {
@@ -104,7 +104,7 @@ const mobileData = {
                 fontStyle: 'bold'
             }
         }      
-    }
+    };
     
 
 let mobileChart = new Chart(mobileCanvas, {
@@ -113,13 +113,13 @@ let mobileChart = new Chart(mobileCanvas, {
     options: mobileOptions
 });
 
-// Main app JavaScript
+//-------------------------------------------------------
+//  Main app JavaScript
 
 let alertBanner = document.getElementById('alert');
 let alertX = document.getElementById('alert-x');
 let notifications = document.getElementById('notif-bell');
 let notifMessages = document.getElementById('notifications');
-let notifX = document.getElementsByClassName('notif-message-x');
 let emailCheckbox = document.getElementById('email');
 let profileCheckbox = document.getElementById('profile');
 let timezone = document.getElementById('timezone');
@@ -194,7 +194,7 @@ function autocomplete(inp, arr) {
     let currentFocus;
     /*execute function when input is written in*/
     inp.addEventListener("input", function(e) {
-        let a, b, i, val = this.value;
+        let a, b, val = this.value;
         /*close already open list of autocomplete values*/
         closeAllLists();
         if (!val) {
@@ -332,7 +332,6 @@ let chartSelectors = document.getElementsByClassName('chartOption');
 trafficSelectors.addEventListener("click", function (e) {
   let selectedChartDiv = e.target.parentNode;
   let currentChart = e.target;
-  let trafficHeader = document.getElementById('trafficHeader');
 
   console.log(currentChart);
 
@@ -343,9 +342,9 @@ trafficSelectors.addEventListener("click", function (e) {
       selectedChart.classList.remove('activeChart');
       selectedChartDiv.classList.add('activeChart');
     }
-  };
+  }
 
-
+// Change chart labels and data based on selected time range
   if(currentChart.textContent === 'Daily') {
     trafficData = {
       labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
