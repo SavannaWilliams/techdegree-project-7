@@ -333,8 +333,6 @@ trafficSelectors.addEventListener("click", function (e) {
   let selectedChartDiv = e.target.parentNode;
   let currentChart = e.target;
 
-  console.log(currentChart);
-
   // Remove existing active chart styling before applying new styling to newly selected chart.
   for(let i = 0; i < chartSelectors.length; i++) {
     let selectedChart = chartSelectors[i];
