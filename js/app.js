@@ -138,6 +138,14 @@ if (localStorage.getItem('timezone-setting') !== null) {
     timezone.value = selected;
 }
 
+// Clear local storage when Cancel button clicked
+
+let cancelBtn = document.getElementById('cancel');
+
+cancelBtn.addEventListener('click', (e) => {
+  localStorage.clear();
+});
+
 // Close the alert banner when the X is clicked
 alertX.addEventListener('click', (e) => {
     alertBanner.remove();
